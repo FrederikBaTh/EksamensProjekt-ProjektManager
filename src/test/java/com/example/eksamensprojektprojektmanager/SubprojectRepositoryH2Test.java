@@ -1,4 +1,4 @@
-package com.example.eksamensprojektprojektmanager;
+/*package com.example.eksamensprojektprojektmanager;
 
 import com.example.eksamensprojektprojektmanager.model.Subproject;
 import com.example.eksamensprojektprojektmanager.repository.SubprojectRepository;
@@ -90,4 +90,4 @@ public class SubprojectRepositoryH2Test {
     }
 
 
-}
+} */

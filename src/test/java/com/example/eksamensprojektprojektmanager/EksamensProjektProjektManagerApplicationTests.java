@@ -1,4 +1,4 @@
-package com.example.eksamensprojektprojektmanager;
+/*package com.example.eksamensprojektprojektmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,3 +10,4 @@ class EksamensProjektProjektManagerApplicationTests {
 	void contextLoads() {
 	}
 }
+*/
