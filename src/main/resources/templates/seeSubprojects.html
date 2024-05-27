@@ -60,7 +60,7 @@
                     <option th:each="user : ${users}" th:value="${user.user_id}" th:text="${user.username}"></option>
                 </select>
                 <input type="hidden" name="subprojectId" th:value="${subproject.subproject_id}">
-                <button type="submit">Tildel Bruget</button>
+                <button type="submit">Tildel Bruger</button>
             </form>
             <p th:if="${subprojectAssignedUsers[subproject.subproject_id] != null and !subprojectAssignedUsers[subproject.subproject_id].isEmpty()}">
                 Tildelte Brugere:
