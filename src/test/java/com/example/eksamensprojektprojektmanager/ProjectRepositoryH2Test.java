@@ -1,4 +1,4 @@
-/*package com.example.eksamensprojektprojektmanager;
+package com.example.eksamensprojektprojektmanager;
 
 import com.example.eksamensprojektprojektmanager.model.Project;
 import com.example.eksamensprojektprojektmanager.repository.AccountRepository;
@@ -90,4 +90,3 @@ public class ProjectRepositoryH2Test {
 
 
 }
-*/
