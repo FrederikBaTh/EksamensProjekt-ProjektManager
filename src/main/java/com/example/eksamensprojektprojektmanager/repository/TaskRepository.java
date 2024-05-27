@@ -107,6 +107,8 @@ public Task findById(Long task_id) {
     String query = "SELECT * FROM tasks WHERE task_id = ?";
     return jdbcTemplate.queryForObject(query, new Object[]{task_id}, (resultSet, i) -> {
         Task task = new Task();
+        task.setProjectId(resultSet.getLong("project_id"));
+        task.setSubprojectId(resultSet.getLong("subproject_id"));
         task.setTask_id(resultSet.getLong("task_id"));
         task.setName(resultSet.getString("name"));
         task.setDescription(resultSet.getString("description"));

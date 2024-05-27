@@ -63,10 +63,6 @@ public class ProjectController {
     public String addProject(@RequestParam("projectName") String projectName, @RequestParam("description") String description, @RequestParam("startDate") String startDate, @RequestParam("projectDeadline") String projectDeadline, HttpServletRequest request, RedirectAttributes redirectAttributes) {
         String userIdString = (String) request.getSession().getAttribute("userId");
 
-        if (userIdString == null || userIdString.isEmpty()) {
-            redirectAttributes.addFlashAttribute("errorMessage", "User ID is missing. Please log in again.");
-            return "redirect:/seeProjects";
-        }
 
         try {
             Project project = new Project();

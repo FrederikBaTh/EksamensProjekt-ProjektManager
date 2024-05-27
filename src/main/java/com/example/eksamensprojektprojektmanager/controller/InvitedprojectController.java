@@ -54,9 +54,6 @@ public class InvitedprojectController {
     @GetMapping("/invitedProjects")
     public String showInvitedProjects(HttpServletRequest request, Model model) {
         String userIdString = (String) request.getSession().getAttribute("userId");
-        if (userIdString == null) {
-            return "redirect:/login";
-        }
 
         long userId = Long.parseLong(userIdString);
 
@@ -91,9 +88,6 @@ public class InvitedprojectController {
     @PostMapping("/deleteInvitations")
     public String deleteInvitations(HttpServletRequest request) {
         String userIdString = (String) request.getSession().getAttribute("userId");
-        if (userIdString == null) {
-            return "redirect:/login";
-        }
 
         long userId = Long.parseLong(userIdString);
 

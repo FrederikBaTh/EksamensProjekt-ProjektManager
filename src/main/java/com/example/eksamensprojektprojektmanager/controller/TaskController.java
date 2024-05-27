@@ -30,10 +30,7 @@ public class TaskController {
     public String showTasks(@PathVariable(required = false) Long projectId,
                             @PathVariable(required = false) Long subprojectId,
                             Model model) {
-        if (projectId == null || subprojectId == null) {
-            // Handle null values gracefully, e.g., redirect to an error page or display a message
-            return "error";
-        }
+
 
         logger.info("Entering showTasks method with projectId: {} and subprojectId: {}", projectId, subprojectId);
         List<Task> tasks = taskService.getTasksByProjectIdAndSubprojectId(projectId, subprojectId);
@@ -75,10 +72,7 @@ public class TaskController {
     @PostMapping("/deleteTask/{projectId}/{taskId}/{subprojectId}")
     public String deleteTask(@PathVariable Long projectId, @PathVariable Long taskId, @PathVariable Long subprojectId, RedirectAttributes redirectAttributes) {
         Task task = taskService.getTaskById(taskId);
-        if (task == null) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Task not found.");
-            return "redirect:/tasks/" + projectId + "/" + subprojectId;
-        }
+
         taskService.deleteTaskById(taskId);
         redirectAttributes.addFlashAttribute("successMessage", "Task deleted successfully.");
         return "redirect:/tasks/" + projectId + "/" + subprojectId;
@@ -87,9 +81,7 @@ public class TaskController {
     @GetMapping("/updateTask/{id}")
     public String showUpdateForm(@PathVariable("id") Long taskId, Model model) {
         logger.info("Task ID: " + taskId);
-        if (taskId == null) {
-            logger.error("Task ID is null in showUpdateForm");
-        }
+
         logger.info("Task ID: " + taskId);
         Task task = taskService.getTaskById(taskId);
         logger.info("Retrieved task: " + task);
@@ -105,14 +97,11 @@ public class TaskController {
                              @ModelAttribute Task updatedTask,
                              RedirectAttributes redirectAttributes) {
         Task existingTask = taskService.getTaskById(taskId);
-        if (existingTask == null) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Task not found.");
-            return "redirect:/tasks/" + updatedTask.getProjectId() + "/" + updatedTask.getSubprojectId();
-        }
+
 
         Task task = taskService.getTaskById(taskId);
 
-        // Update fields other than IDs
+
         // Update fields other than ID
         updatedTask.setTask_id(taskId);
         existingTask.setName(updatedTask.getName());
@@ -137,12 +126,9 @@ public String updateTaskStatus(@PathVariable("id") Long taskId,
                                @RequestParam("status") String status,
                                RedirectAttributes redirectAttributes) {
     Task task = taskService.getTaskById(taskId);
-    if (task == null) {
-        redirectAttributes.addFlashAttribute("errorMessage", "Task not found.");
-        return "redirect:/tasks/" + task.getProjectId() + "/" + task.getSubprojectId();
-    }
+
     task.setStatus(status);
-    taskService.updateTask(task);
+    taskService.updateTaskStatus(taskId, status);
     redirectAttributes.addFlashAttribute("successMessage", "Task status updated successfully.");
     return "redirect:/tasks/" + task.getProjectId() + "/" + task.getSubprojectId();
 }

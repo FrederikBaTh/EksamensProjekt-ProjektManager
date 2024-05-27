@@ -78,10 +78,7 @@ public class SubprojectController {
     @PostMapping("/deleteSubproject/{projectId}/{subprojectId}")
     public String deleteSubproject(@PathVariable Long projectId, @PathVariable Long subprojectId, RedirectAttributes redirectAttributes) {
         Subproject subproject = subprojectService.getSubprojectById(subprojectId);
-        if (subproject == null) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Subproject not found.");
-            return "redirect:/subprojects/" + projectId;
-        }
+
         subprojectService.deleteSubprojectById(subprojectId);
         redirectAttributes.addFlashAttribute("successMessage", "Subproject deleted successfully.");
         return "redirect:/subprojects/" + projectId;
@@ -102,10 +99,7 @@ public class SubprojectController {
                                    @ModelAttribute Subproject updatedSubproject,
                                    RedirectAttributes redirectAttributes) {
         Subproject existingSubproject = subprojectService.getSubprojectById(subprojectId);
-        if (existingSubproject == null) {
-            redirectAttributes.addFlashAttribute("errorMessage", "Subproject not found.");
-            return "redirect:/subprojects/" + updatedSubproject.getProject_id();
-        }
+
         updatedSubproject.setSubproject_id(subprojectId);
         updatedSubproject.setProject_id(existingSubproject.getProject_id());
         Subproject updatedSubprojectInDb = subprojectService.updateSubproject(updatedSubproject);
@@ -119,10 +113,6 @@ public class SubprojectController {
         Account user = accountService.getUserById(userId);
         Subproject subproject = subprojectService.getSubprojectById(subprojectId);
 
-        if (user == null || subproject == null) {
-            redirectAttributes.addFlashAttribute("errorMessage", "User or Subproject not found.");
-            return "redirect:/subprojects/" + subprojectId;
-        }
 
         // Assign the user to the subproject
         userSubprojectAssignmentService.assignUserToSubproject(user.getUser_id(), subproject.getSubproject_id());
