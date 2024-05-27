@@ -39,23 +39,18 @@ public class SubprojectRepositoryH2Test {
 
     @Test
     void editSubprojectTest() {
-        // Retrieve an existing subproject from the repository
         Subproject existingSubproject = repository.findById(1L);
 
-        // Verify that the subproject was retrieved successfully
         assertNotNull(existingSubproject);
 
-        // Edit the subproject
         existingSubproject.setSubprojectname("Updated Subproject");
         existingSubproject.setDescription("Updated description");
         existingSubproject.setStartDate(LocalDate.of(2023, 12, 31));
         existingSubproject.setDeadline(LocalDate.of(2024, 1, 12));
 
 
-        // Update the subproject in the repository
         Subproject updatedSubproject = repository.updateSubproject(existingSubproject);
 
-        // Verify that the subproject was updated successfully
         assertNotNull(updatedSubproject);
         assertEquals("Updated Subproject", updatedSubproject.getSubprojectname());
         assertEquals("Updated description",updatedSubproject.getDescription());
@@ -66,24 +61,18 @@ public class SubprojectRepositoryH2Test {
 
     @Test
     void deleteSubprojectTest() {
-        // Retrieve an existing subproject from the repository
         Subproject existingSubproject = repository.findById(1L);
 
-        // Verify that the subproject was retrieved successfully
         assertNotNull(existingSubproject);
 
-        // Delete the subproject
         repository.deleteSubprojectsByProjectId(1L);
 
-        // Try to retrieve the deleted subproject
         Subproject deletedSubproject = null;
         try {
             deletedSubproject = repository.findById(existingSubproject.getSubproject_id());
         } catch (EmptyResultDataAccessException e) {
-            // This exception is expected because the subproject has been deleted
         }
 
-        // Verify that the subproject was deleted successfully
         assertNull(deletedSubproject);
     }
 
