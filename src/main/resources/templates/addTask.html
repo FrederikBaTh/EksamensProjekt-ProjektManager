@@ -10,7 +10,7 @@
 <header>
     <div class="container-fluid p-5 bg-primary text-white text-center">
         <h1 th:text="${task != null ? 'Update Task' : 'Add Task'}"></h1>
-        <p>Opret en task her!</p>
+        <p>Opret en opgave her!</p>
     </div>
 </header>
 <nav class="topnav">
@@ -30,7 +30,7 @@
             <input type="hidden" name="projectId" th:value="${projectId}">
             <input type="hidden" name="subprojectId" th:value="${subprojectId}">
             <div>
-                <label for="taskName">Task Navn:</label><br>
+                <label for="taskName">Opgave Navn:</label><br>
                 <input type="text" id="taskName" name="taskName" required>
             </div>
             <div>
@@ -47,7 +47,7 @@
             </div>
 
             <br>
-            <button type="submit">Tilføj Task</button>
+            <button type="submit">Tilføj opgave</button>
         </form>
     </div>
 
@@ -57,7 +57,7 @@
             <input type="hidden" name="projectId" th:value="${projectId}">
             <input type="hidden" name="subprojectId" th:value="${subprojectId}">
             <div>
-                <label for="taskName">Task Navn:</label><br>
+                <label for="taskName">Opgave Navn:</label><br>
                 <input type="text" id="updatename" name="name" required th:value="${task.name}">
             </div>
             <div>
@@ -73,7 +73,7 @@
                 <input type="datetime-local" id="updatedeadline" name="deadline" required th:value="${task.deadline}">
             </div>
             <br>
-            <button type="submit">Opdater Task</button>
+            <button type="submit">Opdater opgave</button>
         </form>
     </div>
 </div>

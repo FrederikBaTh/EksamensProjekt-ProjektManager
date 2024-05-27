@@ -11,7 +11,7 @@
 <header>
     <div class="container-fluid p-5 bg-primary text-white text-center">
         <h1>My Account</h1>
-        <p>Your account details</p>
+        <p>Dine Konto Oplysninger</p>
     </div>
 </header>
 <nav class="topnav">
@@ -25,35 +25,37 @@
 <div class="project-container">
     <table>
         <tr>
-            <th>Attribute</th>
-            <th>Value</th>
-        </tr>
-        <tr>
-            <td>Name</td>
+            <td>Navn</td>
             <td th:text="${user.name}"></td>
         </tr>
         <tr>
-            <td>Username</td>
+            <td>Brugernavn</td>
             <td th:text="${user.username}"></td>
         </tr>
         <tr>
-            <td>Company</td>
+            <td>Firma</td>
             <td th:text="${user.company}"></td>
         </tr>
         <tr>
-            <td>Job Title</td>
+            <td>Job Titel</td>
             <td th:text="${user.jobTitle}"></td>
         </tr>
+
         <tr>
-            <td>Description</td>
+            <td>Beskrivelse</td>
             <td th:text="${user.description}"></td>
         </tr>
+
     </table>
 
+    <form action="/editAccount" method="get">
+        <button type="submit" class="btn">Rediger Konto oplysninger</button>
+    </form>
+
     <!-- Form to add new experience -->
-    <h2>Add Experience</h2>
+    <h2>Tilføj Arbejds Erfaring</h2>
     <form action="/addExperience" method="post">
-        <label for="skill">Skill:</label>
+        <label for="skill">Kompetencer:</label>
         <select id="skill" name="skill" required>
             <option value="Frontend udvikling">Frontend udvikling</option>
             <option value="C# udvikling">C# udvikling</option>
@@ -70,18 +72,18 @@
             <option value="CRM business consultant">CRM business consultant</option>
             <option value="e-commerce consultant">e-commerce consultant</option>
         </select><br><br>
-        <label for="yearsOfExperience">Years of Experience:</label>
+        <label for="yearsOfExperience">Din Erfaring i År:</label>
         <input type="number" id="yearsOfExperience" name="yearsOfExperience" required><br><br>
-        <button type="submit">Add Experience</button>
+        <button type="submit">Tilføj Erfaring</button>
     </form>
 
     <!-- Display list of experiences -->
-    <h2>My Experiences</h2>
+    <h2>Min Erfaring</h2>
     <table>
         <tr>
-            <th>Skill</th>
-            <th>Years of Experience</th>
-            <th>Action</th>
+            <th>Kompetencer</th>
+            <th>Års Erfaring</th>
+            <th></th>
         </tr>
         <tr th:each="experience : ${experiences}">
             <td th:text="${experience.skill}"></td>
@@ -89,15 +91,12 @@
             <td>
                 <form action="/deleteExperience" method="post">
                     <input type="hidden" name="experienceId" th:value="${experience.experienceId}" />
-                    <button type="submit">Delete</button>
+                    <button type="submit">Slet</button>
                 </form>
             </td>
         </tr>
     </table>
 
-    <form action="/editAccount" method="get">
-        <button type="submit" class="btn">Edit</button>
-    </form>
 </div>
 
 </body>

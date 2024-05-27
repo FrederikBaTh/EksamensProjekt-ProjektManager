@@ -3,16 +3,41 @@
 <link rel="stylesheet" href="/main.css">
 
 <head>
+    <meta charset="UTF-8">
     <title>Inviterede Projekter</title>
 </head>
 <body>
-<h1>Inviterede Projekter</h1>
-<ul>
-    <li th:each="project : ${invitedProjects}">
-        <p th:text="${project.projectName}"></p>
-        <!-- Display other project details as needed -->
-        <a th:href="@{/subprojects/{id}(id=${project.project_id})}">Se Detaljer</a>
-    </li>
-</ul>
+<header>
+    <div class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Liste over inviterede projekter </h1>
+        <p>Projekt oversigt</p>
+    </div>
+</header>
+<nav class="topnav">
+    <div class="topnav-left">
+        <a href="/seeProjects">Tilbage til Projekter</a>
+    </div>
+    <div class="topnav-right">
+        <a href="/logout">Log ud</a>
+    </div>
+</nav>
+<table>
+    <thead>
+    <tr>
+        <th>Projekt navn</th>
+        <!-- Add other headers as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="project : ${invitedProjects}">
+        <td>
+            <form th:action="@{/subprojects/{id}(id=${project.project_id})}" method="get">
+                <button type="submit" class="btn" th:text="${project.projectName}">Project Navn</button>
+            </form>
+        </td>
+        <!-- Add other columns as needed -->
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>

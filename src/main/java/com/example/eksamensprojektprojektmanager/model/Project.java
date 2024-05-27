@@ -19,7 +19,7 @@ public class Project {
     @Column(name = "name",nullable = false, unique = false)
     public String projectName;
 
-    //TODO ikke i datebasen endnu
+    @Column(name = "description",nullable = false)
     public String description;
 
     @Column(name = "startDate",nullable = false)
@@ -42,8 +42,9 @@ public class Project {
     public void setUserId(Long user_id) {
         this.user_id = user_id;
     }
-    public Project(String projectName, LocalDate startDate, LocalDate projectDeadline ) {
+    public Project(String projectName,String description, LocalDate startDate, LocalDate projectDeadline ) {
         this.projectName = projectName;
+        this.description = description;
         this.startDate = startDate;
         this.projectDeadline = projectDeadline;
     }
@@ -100,5 +101,13 @@ public class Project {
                 ", projectDeadline=" + projectDeadline +
                 ", projectStatus='" + projectStatus + '\'' +
                 '}';
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

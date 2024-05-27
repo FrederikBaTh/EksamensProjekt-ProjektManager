@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
-    <title>Subprojects</title>
+    <title>Underprojekter</title>
 </head>
 <body>
 <header>
     <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Subprojekter</h1>
-        <p>Subprojekter oversigt</p>
+        <h1>Underprojekter</h1>
+        <p>Underprojekt oversigt</p>
     </div>
 </header>
 <nav class="topnav">
     <div class="topnav-left">
         <a href="/seeProjects">Tilbage til Projekter</a>
-        <a th:href="@{/addSubproject/{projectId}(projectId=${projectId})}">Tilføj Subprojekt</a>    </div>
+        <a th:href="@{/addSubproject/{projectId}(projectId=${projectId})}">Tilføj Underprojekt</a>    </div>
     <div class="topnav-right">
-        <a href="/logout">Logud</a>
+        <a href="/logout">Log ud</a>
     </div>
 </nav>
 <table>
     <thead>
     <tr>
-        <th>Subprojekt Navn</th>
+        <th>Underprojekt Navn</th>
         <th>Beskrivelse</th>
         <th>Handlinger</th>
         <th>Brugere Tilkoblet</th>
@@ -49,7 +49,7 @@
             <!-- Delete button for each subproject -->
             <form th:action="@{/deleteSubproject/{projectId}/{subprojectId}(projectId=${projectId}, subprojectId=${subproject.subproject_id})}"
                   method="post"
-                  onsubmit="return confirm('Er du sikker på, at du vil slette dette subprojekt?');">
+                  onsubmit="return confirm('Er du sikker på, at du vil slette dette underprojekt?');">
                 <button type="submit" class="btn">Slet</button>
             </form>
 
@@ -60,10 +60,10 @@
                     <option th:each="user : ${users}" th:value="${user.user_id}" th:text="${user.username}"></option>
                 </select>
                 <input type="hidden" name="subprojectId" th:value="${subproject.subproject_id}">
-                <button type="submit">Assign User</button>
+                <button type="submit">Tildel Bruget</button>
             </form>
             <p th:if="${subprojectAssignedUsers[subproject.subproject_id] != null and !subprojectAssignedUsers[subproject.subproject_id].isEmpty()}">
-                Assigned Users:
+                Tildelte Brugere:
             <ul>
                 <li th:each="user : ${subprojectAssignedUsers[subproject.subproject_id]}" th:text="${user.username}"></li>
             </ul>

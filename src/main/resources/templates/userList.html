@@ -28,7 +28,7 @@
         <th>Navn</th>
         <th>Virksomhed</th>
         <th>Job Titel</th>
-        <th>Top Erfaring</th>
+        <th>Top Kompetence</th>
         <th>Handlinger</th>
     </tr>
     </thead>
@@ -49,7 +49,7 @@
                     <option th:each="project : ${projects}" th:value="${project.project_id}" th:text="${project.projectName}"></option>
                 </select>
                 <input type="hidden" name="senderUserId" th:value="${loggedInUserId}" />
-                <button type="submit">Invite</button>
+                <button type="submit">Inviter</button>
             </form>
         </td>
     </tr>

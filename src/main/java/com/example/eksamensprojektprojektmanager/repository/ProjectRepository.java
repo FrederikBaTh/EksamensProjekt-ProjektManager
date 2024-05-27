@@ -40,18 +40,17 @@ public class ProjectRepository {
     }
 
     public Project addProject(Project project) {
-        String insertQuery = "INSERT INTO projects (name, user_id, startDate, deadline, description) VALUES (?, ?, ?, ?, ?)";
-        int rowsInserted = jdbcTemplate.update(insertQuery, project.getProjectName(),
-                project.getUser_id(),
-                java.sql.Date.valueOf(project.getStartDate()),
-                java.sql.Date.valueOf(project.getProjectDeadline()),
-                project.getProjectStatus());
-        if (rowsInserted > 0) {
-            System.out.println("A new project was added successfully!");
-            return project;
-        }
-        return null;
+    String insertQuery = "INSERT INTO projects (name, user_id, description, startDate, deadline) VALUES (?, ?, ?, ?, ?)";
+    int rowsInserted = jdbcTemplate.update(insertQuery, project.getProjectName(),
+            project.getUser_id(), project.getDescription(),
+            java.sql.Date.valueOf(project.getStartDate()),
+            java.sql.Date.valueOf(project.getProjectDeadline()));
+    if (rowsInserted > 0) {
+        System.out.println("A new project was added successfully!");
+        return project;
     }
+    return null;
+}
 
 
     public boolean existsByNameAndUserId(String name, Long userId) {
@@ -73,8 +72,9 @@ public class ProjectRepository {
         }, userId);
     }
     public Project updateProject(Project project) {
-        String updateQuery = "UPDATE projects SET name = ?, startDate = ?, deadline = ? WHERE project_id = ?";
+        String updateQuery = "UPDATE projects SET name = ?, description= ?, startDate = ?, deadline = ? WHERE project_id = ?";
         int rowsUpdated = jdbcTemplate.update(updateQuery, project.getProjectName(),
+                project.getDescription(),
                 java.sql.Date.valueOf(project.getStartDate()),
                 java.sql.Date.valueOf(project.getProjectDeadline()),
                 project.getProject_id());

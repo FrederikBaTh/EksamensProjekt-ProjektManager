@@ -60,7 +60,7 @@ public class ProjectController {
 
 
     @PostMapping("/addProject")
-    public String addProject(@RequestParam("projectName") String projectName, @RequestParam("startDate") String startDate, @RequestParam("projectDeadline") String projectDeadline, HttpServletRequest request, RedirectAttributes redirectAttributes) {
+    public String addProject(@RequestParam("projectName") String projectName, @RequestParam("description") String description, @RequestParam("startDate") String startDate, @RequestParam("projectDeadline") String projectDeadline, HttpServletRequest request, RedirectAttributes redirectAttributes) {
         String userIdString = (String) request.getSession().getAttribute("userId");
 
         if (userIdString == null || userIdString.isEmpty()) {
@@ -72,6 +72,8 @@ public class ProjectController {
             Project project = new Project();
             project.setProjectName(projectName);
             Long userId = Long.parseLong(userIdString);
+            project.setDescription(description);
+            project.setDescription(description);
             project.setUserId(userId);
 
 
@@ -105,11 +107,12 @@ public class ProjectController {
 
 
 
-    @PostMapping("/updateProject")
-    public String updateProject(@RequestParam("projectId") Long projectId,
+
+    @PostMapping("/updateProject/{projectId}")
+    public String updateProject(@PathVariable Long projectId,
                                 @RequestParam("projectName") String projectName,
                                 @RequestParam("startDate") String startDate,
-                                @RequestParam("projectDeadline") String projectDeadline,
+                                @RequestParam(value = "projectDeadline", required = false) String projectDeadline,
                                 HttpServletRequest request,
                                 RedirectAttributes redirectAttributes) {
         String userIdString = (String) request.getSession().getAttribute("userId");

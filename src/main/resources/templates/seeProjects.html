@@ -29,6 +29,7 @@
     <thead>
     <tr>
         <th>Project Navn</th>
+        <th>Beskrivelse</th>
         <th>Start Dato</th>
         <th>Deadline</th>
         <th>Handlinger</th>
@@ -42,6 +43,7 @@
         <button type="submit" class="btn" th:text="${project.projectName}">Project Navn</button>
     </form>
 </td>
+        <td th:text="${project.description}"></td>
         <td th:text="${project.startDate != null ? #temporals.format(project.startDate, 'dd-MM-yyyy') : 'Start Date Not Provided'}"></td>
         <td th:text="${project.projectDeadline != null ? #temporals.format(project.projectDeadline, 'dd-MM-yyyy') : 'Deadline Not Provided'}"></td>
         <td>

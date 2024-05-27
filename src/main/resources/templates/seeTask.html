@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
-    <title>Task List</title>
+    <title>Opgave Liste</title>
 </head>
 <body>
 <header>
     <div class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Task Liste</h1>
-        <p>Task oversigt</p>
+        <h1>Opgave Liste</h1>
+        <p>Opgave oversigt</p>
     </div>
 </header>
 <nav class="topnav">
     <div class="topnav-left">
-        <a th:href="@{/subprojects/{projectId}(projectId=${projectId})}">Tilbage til Subprojekter</a>
-        <a th:href="@{/addTask/{projectId}/{subprojectId}(projectId=${projectId}, subprojectId=${subprojectId})}">Add Task</a>
+        <a th:href="@{/subprojects/{projectId}(projectId=${projectId})}">Tilbage til Underprojekter</a>
+        <a th:href="@{/addTask/{projectId}/{subprojectId}(projectId=${projectId}, subprojectId=${subprojectId})}">Tilføj Opgave</a>
     </div>
     <div class="topnav-right">
-        <a href="/logout">Logud</a>
+        <a href="/logout">Log ud</a>
     </div>
 </nav>
 <table>
     <thead>
     <tr>
-        <th>Task Navn</th>
+        <th>Opgave Navn</th>
         <th>Beskrivelse</th>
         <th>Dato</th>
         <th>Deadline</th>
