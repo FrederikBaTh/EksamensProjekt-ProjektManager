@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.test.context.ActiveProfiles;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
 
@@ -14,13 +15,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @ActiveProfiles("h2")
+@Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD, scripts = "classpath:h2init.sql")
 public class SubprojectRepositoryH2Test {
     @Autowired
     SubprojectRepository repository;
 
     @Test
     void createSubprojectTest() {
-        // Create a new Subproject object
         Subproject newSubproject = new Subproject();
         newSubproject.setSubprojectname("Test Subproject");
         newSubproject.setDescription("Test Description");
@@ -28,13 +29,10 @@ public class SubprojectRepositoryH2Test {
         newSubproject.setStartDate(LocalDate.of(2022, 1, 1));
         newSubproject.setDeadline(LocalDate.of(2022, 12, 31));
 
-        // Save the new subproject to the repository
         repository.addSubproject(newSubproject, 1L);
 
-        // Retrieve the saved subproject from the repository
         Subproject savedSubproject = repository.findById(4L);
 
-        // Verify that the subproject was saved successfully
         assertNotNull(savedSubproject);
         assertEquals("Test Subproject", savedSubproject.getSubprojectname());
     }

@@ -1,3 +1,5 @@
+
+DROP TABLE IF EXISTS users CASCADE;
 CREATE TABLE users (
     user_id BIGINT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -8,7 +10,7 @@ CREATE TABLE users (
     job_title VARCHAR(100),
     description TEXT
 );
-
+DROP TABLE IF EXISTS projects CASCADE;
 CREATE TABLE projects (
                           project_id BIGINT AUTO_INCREMENT PRIMARY KEY,
                           user_id BIGINT,
@@ -18,7 +20,7 @@ CREATE TABLE projects (
                           deadline DATE,
                           FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
+DROP TABLE IF EXISTS subprojects CASCADE;
 CREATE TABLE subprojects (
                              subproject_id BIGINT AUTO_INCREMENT PRIMARY KEY,
                              project_id BIGINT,
@@ -28,6 +30,7 @@ CREATE TABLE subprojects (
                              deadline DATE,
                              FOREIGN KEY (project_id) REFERENCES projects(project_id)
 );
+DROP TABLE IF EXISTS tasks CASCADE;
 CREATE TABLE tasks (
                        task_id BIGINT AUTO_INCREMENT PRIMARY KEY,
                        project_id BIGINT,
