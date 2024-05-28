@@ -15,7 +15,6 @@ import java.util.Properties;
 public class DB_Connector_Test {
     private static Connection connection = null;
 
-    //Load application properties
     private static String getProperty(String property_name) {
         Properties properties = new Properties();
         try (InputStream input = DB_Connector_Test.class.getClassLoader().getResourceAsStream("application-test.properties")) {
@@ -28,7 +27,6 @@ public class DB_Connector_Test {
         return properties.getProperty(property_name);
     }
 
-    //Insert application properties to get connection to database
     public static Connection getConnection() {
         if (connection != null) {
             return connection;
