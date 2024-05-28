@@ -1,0 +1,280 @@
+<mxfile host="app.diagrams.net" modified="2024-05-27T17:27:27.939Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0" version="24.4.8" etag="w4o06LGb04lZQoc4mKcm" type="device">
+  <diagram id="b-7HnydzLNYxy_Ev7rBW" name="Side-1">
+    <mxGraphModel dx="7052" dy="3572" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="640mXbKW3xFqXR1uTZi8-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node12" target="node9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1140" y="-189" />
+              <mxPoint x="1140" y="854" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Account&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getAssignedSubprojects(): List&amp;lt;Subproject&amp;gt;&lt;br/&gt;+ setUsername(String): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ setPassword(String): void&lt;br/&gt;+ getJobTitle(): String&lt;br/&gt;+ setUser_id(Long): void&lt;br/&gt;+ getUser_id(): Long&lt;br/&gt;+ assignSubproject(Subproject): void&lt;br/&gt;+ setDescription(String): void&lt;br/&gt;+ setName(String): void&lt;br/&gt;+ setAdmin(boolean): void&lt;br/&gt;+ getUsername(): String&lt;br/&gt;+ getDescription(): String&lt;br/&gt;+ getName(): String&lt;br/&gt;+ setJobTitle(String): void&lt;br/&gt;+ getPassword(): String&lt;br/&gt;+ isAdmin(): boolean&lt;br/&gt;+ setCompany(String): void&lt;br/&gt;+ getCompany(): String&lt;br/&gt;+ setAssignedSubprojects(List&amp;lt;Subproject&amp;gt;): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="190" y="-435" width="349" height="491" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node1" target="node6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node1" target="node11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node1" target="node14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AccountController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ showUserList(Model, HttpServletRequest): String&lt;br/&gt;+ showUserDetails(Model, Long, HttpServletRequest): String&lt;br/&gt;+ registerAccount(Account, Boolean): String&lt;br/&gt;+ login(HttpServletRequest, String, String, RedirectAttributes): String&lt;br/&gt;+ showRegisterPage(): String&lt;br/&gt;+ deleteExperience(Long, RedirectAttributes): String&lt;br/&gt;+ showLoginPage(): String&lt;br/&gt;+ editUser(Long, String, String, String, String, RedirectAttributes): String&lt;br/&gt;+ addExperience(HttpServletRequest, String, int, RedirectAttributes): String&lt;br/&gt;+ deleteUser(Long): String&lt;br/&gt;+ getMyAccount(HttpServletRequest, Model): String&lt;br/&gt;+ showEditAccount(Model, HttpServletRequest): String&lt;br/&gt;+ redirectToLogin(): RedirectView&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1800" y="-350" width="462" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="node10" target="node3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node10" target="node21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-370" y="50" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-261" y="-2" />
+              <mxPoint x="-440" y="-2" />
+              <mxPoint x="-440" y="510" />
+              <mxPoint x="-370" y="510" />
+              <mxPoint x="-370" y="508" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node10" target="node12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AccountRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ save(Account): void&lt;br/&gt;+ updateAccount(Account): void&lt;br/&gt;+ getUserIdByUsername(String): String&lt;br/&gt;+ deleteUser(Long): void&lt;br/&gt;+ getAllUsers(): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ usernameExists(String): boolean&lt;br/&gt;+ isValidUser(String, String): boolean&lt;br/&gt;+ getUserById(Long): Account&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="-270" width="277" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="node11" target="node0">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-640" y="-162" />
+              <mxPoint x="-640" y="-830" />
+              <mxPoint x="473" y="-830" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node11" target="node19">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-640" y="-162" />
+              <mxPoint x="-640" y="-716" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node11" target="node10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;AccountService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getUserById(Long): Account&lt;br/&gt;+ addExperienceToUser(Long, String, int): void&lt;br/&gt;+ deleteUser(Long): void&lt;br/&gt;+ getUsersByIdsList(List&amp;lt;Long&amp;gt;): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ isValidUser(String, String): boolean&lt;br/&gt;+ getAllUsers(): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ getUserIdByUsername(String): String&lt;br/&gt;+ saveAccount(Account): void&lt;br/&gt;+ deleteExperience(Long): void&lt;br/&gt;+ usernameExists(String): boolean&lt;br/&gt;+ updateAccount(Account): void&lt;br/&gt;+ getExperiencesByUserId(Long): List&amp;lt;Experience&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1040" y="-316" width="357" height="307" as="geometry" />
+        </mxCell>
+        <mxCell id="node0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Experience&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getYearsOfExperience(): int&lt;br/&gt;+ getSkill(): String&lt;br/&gt;+ getUserId(): Long&lt;br/&gt;+ setSkill(String): void&lt;br/&gt;+ getExperienceId(): Long&lt;br/&gt;+ setExperienceId(Long): void&lt;br/&gt;+ setUserId(Long): void&lt;br/&gt;+ setYearsOfExperience(int): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="-810" width="245" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="node19" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ExperienceRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ findByUserId(Long): List&amp;lt;Experience&amp;gt;&lt;br/&gt;+ save(Experience): void&lt;br/&gt;+ delete(Long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-300" y="-770" width="283" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="node17" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;enumeration&amp;gt;&amp;gt;&lt;/i&gt;&lt;br/&gt;&lt;b&gt;InvitationStatus&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ values(): InvitationStatus[]&lt;br/&gt;+ valueOf(String): InvitationStatus&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="280.5" y="256.5" width="244" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node4" target="node2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1200" y="473" />
+              <mxPoint x="-1200" y="1237" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node4" target="node6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1200" y="473" />
+              <mxPoint x="-1200" y="207" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;InvitedprojectController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ showInvitedProjects(HttpServletRequest, Model): String&lt;br/&gt;+ deleteInvitations(HttpServletRequest): String&lt;br/&gt;+ declineInvite(Long): String&lt;br/&gt;+ showInvites(Model, HttpServletRequest): String&lt;br/&gt;+ acceptInvite(Long): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1720" y="400" width="397" height="146" as="geometry" />
+        </mxCell>
+        <mxCell id="node20" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Project&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setStartDate(LocalDate): void&lt;br/&gt;+ getProject_id(): Long&lt;br/&gt;+ setProject_id(Long): void&lt;br/&gt;+ setProjectName(String): void&lt;br/&gt;+ getStartDate(): LocalDate&lt;br/&gt;+ getUser_id(): Long&lt;br/&gt;+ setProjectDeadline(LocalDate): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ setProjectStatus(String): void&lt;br/&gt;+ setUserId(Long): void&lt;br/&gt;+ getProjectStatus(): String&lt;br/&gt;+ getProjectName(): String&lt;br/&gt;+ getProjectDeadline(): LocalDate&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="673" y="22.5" width="267" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node5" target="node6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ showProjectPage(): String&lt;br/&gt;+ inviteUserToProject(long, long, long, RedirectAttributes): String&lt;br/&gt;+ updateProject(Long, String, String, String, HttpServletRequest, RedirectAttributes): String&lt;br/&gt;+ addProject(String, String, String, HttpServletRequest, RedirectAttributes): String&lt;br/&gt;+ deleteProject(String, HttpServletRequest, RedirectAttributes): String&lt;br/&gt;+ logout(HttpServletRequest): String&lt;br/&gt;+ showProjects(HttpServletRequest, Model): String&lt;br/&gt;+ showUpdateForm(Long, Model): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1790" y="80" width="467" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="node16" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectInvitation&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setSenderUserId(Long): void&lt;br/&gt;+ setReceiverUserId(Long): void&lt;br/&gt;+ setProjectId(Long): void&lt;br/&gt;+ getProjectId(): Long&lt;br/&gt;+ setStatus(InvitationStatus): void&lt;br/&gt;+ getSenderUserId(): Long&lt;br/&gt;+ getSenderUserName(): String&lt;br/&gt;+ getStatus(): InvitationStatus&lt;br/&gt;+ getReceiverUserName(): String&lt;br/&gt;+ getProjectName(): String&lt;br/&gt;+ getReceiverUserId(): Long&lt;br/&gt;+ setInvitationId(Long): void&lt;br/&gt;+ setProjectName(String): void&lt;br/&gt;+ setSenderUserName(String): void&lt;br/&gt;+ setReceiverUserName(String): void&lt;br/&gt;+ getInvitationId(): Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="270" y="370" width="265" height="399" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node21" target="node16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node21" target="node17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="508" />
+              <mxPoint x="120" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node21" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectInvitationRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ deleteInvitationsForUser(Long): void&lt;br/&gt;+ acceptInvite(Long): void&lt;br/&gt;+ getProjectNameByInviteId(Long): String&lt;br/&gt;+ getInvitesByUserId(Long): List&amp;lt;ProjectInvitation&amp;gt;&lt;br/&gt;+ getAcceptedUserIdsByProjectId(Long): List&amp;lt;Long&amp;gt;&lt;br/&gt;+ declineInvite(Long): void&lt;br/&gt;+ getAcceptedProjectIdsByUserId(Long): List&amp;lt;Long&amp;gt;&lt;br/&gt;+ inviteUserToProject(long, long, long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="400" width="363" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node14" target="node21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectInvitationService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ inviteUserToProject(long, long, long): void&lt;br/&gt;+ getInvitesByUserId(Long): List&amp;lt;ProjectInvitation&amp;gt;&lt;br/&gt;+ deleteInvitationsForUser(Long): void&lt;br/&gt;+ getAcceptedUserIdsByProjectId(Long): List&amp;lt;Long&amp;gt;&lt;br/&gt;+ acceptInvite(Long): void&lt;br/&gt;+ declineInvite(Long): void&lt;br/&gt;+ getAcceptedProjectIdsByUserId(Long): List&amp;lt;Long&amp;gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-990" y="400" width="363" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node22" target="node20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node22" target="node7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-220" y="350" />
+              <mxPoint x="-480" y="350" />
+              <mxPoint x="-480" y="1348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node22" target="node18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-220" y="350" />
+              <mxPoint x="-480" y="350" />
+              <mxPoint x="-480" y="951" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addProject(Project): Project&lt;br/&gt;+ updateProject(Project): Project&lt;br/&gt;+ getProjectById(Long): Project&lt;br/&gt;+ getProjectsByProjectIds(List&amp;lt;Long&amp;gt;): List&amp;lt;Project&amp;gt;&lt;br/&gt;+ getProjectsByUserId(Long): List&amp;lt;Project&amp;gt;&lt;br/&gt;+ deleteProjectById(Long): boolean&lt;br/&gt;+ existsByNameAndUserId(String, Long): boolean&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-403" y="80" width="366" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node6" target="node22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ProjectService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ updateProject(Project, String): Project&lt;br/&gt;+ getProjectsByProjectIds(List&amp;lt;Long&amp;gt;): List&amp;lt;Project&amp;gt;&lt;br/&gt;+ getProjectsByUserId(Long): List&amp;lt;Project&amp;gt;&lt;br/&gt;+ deleteProjectById(Long): void&lt;br/&gt;+ addProject(Project, String): Project&lt;br/&gt;+ getProjectById(Long): Project&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-990" y="80" width="366" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="node9" target="node12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="600" y="654" />
+              <mxPoint x="600" y="120" />
+              <mxPoint x="365" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="node9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Subproject&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ setProject_id(Long): void&lt;br/&gt;+ setAssignedUsers(List&amp;lt;Account&amp;gt;): void&lt;br/&gt;+ setSubproject_id(Long): void&lt;br/&gt;+ getSubprojectname(): String&lt;br/&gt;+ getSubproject_id(): Long&lt;br/&gt;+ getStartDate(): LocalDate&lt;br/&gt;+ getDescription(): String&lt;br/&gt;+ setStartDate(LocalDate): void&lt;br/&gt;+ setDeadline(LocalDate): void&lt;br/&gt;+ toString(): String&lt;br/&gt;+ assignAccount(Account): void&lt;br/&gt;+ getAssignedUsers(): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ setSubprojectname(String): void&lt;br/&gt;+ getProject_id(): Long&lt;br/&gt;+ getDeadline(): LocalDate&lt;br/&gt;+ setDescription(String): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="750" y="654" width="295" height="399" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node8" target="node24">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1250" y="863" />
+              <mxPoint x="-1250" y="-441" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node8" target="node11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1250" y="863" />
+              <mxPoint x="-1250" y="-86" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node8" target="node14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1250" y="863" />
+              <mxPoint x="-1250" y="544" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="node8" target="node13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SubprojectController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ showSubprojects(Long, Model): String&lt;br/&gt;+ assignUserToSubproject(Long, Long, RedirectAttributes): String&lt;br/&gt;+ showUpdateForm(Long, Model): String&lt;br/&gt;+ showAddSubprojectPage(Long, Model): String&lt;br/&gt;+ deleteSubproject(Long, Long, RedirectAttributes): String&lt;br/&gt;+ addSubproject(Long, Subproject, RedirectAttributes): String&lt;br/&gt;+ updateSubproject(Long, Subproject, RedirectAttributes): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1744.5" y="767" width="446" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="node18" target="node7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node18" target="node9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node18" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SubprojectRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getSubprojectsByProjectId(Long): List&amp;lt;Subproject&amp;gt;&lt;br/&gt;+ findByProjectId(Long): List&amp;lt;Subproject&amp;gt;&lt;br/&gt;+ deleteSubprojectsByProjectId(Long): void&lt;br/&gt;+ addSubproject(Subproject, Long): void&lt;br/&gt;+ updateSubprojectJPA(Subproject): Subproject&lt;br/&gt;+ updateSubproject(Subproject): Subproject&lt;br/&gt;+ deleteSubprojectById(Long): void&lt;br/&gt;+ findById(Long): Subproject&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-404" y="790" width="367" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node13" target="node18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="node13" target="node3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node13" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;SubprojectService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ deleteSubprojectById(Long): void&lt;br/&gt;+ updateSubproject(Subproject): Subproject&lt;br/&gt;+ getAssignedUsers(Long): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ addSubproject(Subproject, Long): void&lt;br/&gt;+ getSubprojectsByProjectId(Long): List&amp;lt;Subproject&amp;gt;&lt;br/&gt;+ getSubprojectById(Long): Subproject&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1007.5" y="790" width="367" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="node23" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Task&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ getSubprojectId(): Long&lt;br/&gt;+ setTask_id(Long): void&lt;br/&gt;+ setName(String): void&lt;br/&gt;+ getDate(): LocalDateTime&lt;br/&gt;+ setStatus(String): void&lt;br/&gt;+ getTask_id(): Long&lt;br/&gt;+ getName(): String&lt;br/&gt;+ setDeadline(LocalDateTime): void&lt;br/&gt;+ getDeadline(): LocalDateTime&lt;br/&gt;+ setProjectId(Long): void&lt;br/&gt;+ getStatus(): String&lt;br/&gt;+ getDescription(): String&lt;br/&gt;+ setDescription(String): void&lt;br/&gt;+ setSubprojectId(Long): void&lt;br/&gt;+ setDate(LocalDateTime): void&lt;br/&gt;+ getProjectId(): Long&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="420" y="1170" width="253" height="399" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="node15" target="node23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1533" y="1590" />
+              <mxPoint x="-438" y="1590" />
+              <mxPoint x="547" y="1589" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node15" target="node2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TaskController&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ updateTask(Long, Task, RedirectAttributes): String&lt;br/&gt;+ addTask(Long, Long, String, String, LocalDateTime, LocalDateTime, RedirectAttributes): String&lt;br/&gt;+ showAddTaskPage(Long, Long, Model): String&lt;br/&gt;+ deleteTask(Long, Long, Long, RedirectAttributes): String&lt;br/&gt;+ showUpdateForm(Long, Model): String&lt;br/&gt;+ showTasks(Long, Long, Model): String&lt;br/&gt;+ updateTaskStatus(Long, Long, Long, String, RedirectAttributes): String&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1770" y="1165" width="473" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node7" target="node23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TaskRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addTask(Task, Long, Long): void&lt;br/&gt;+ findById(Long): Task&lt;br/&gt;+ updateTaskStatus(Long, String): void&lt;br/&gt;+ updateTask(Task): Task&lt;br/&gt;+ deleteTaskByIdJPA(Long): boolean&lt;br/&gt;+ findByProjectIdAndSubProjectIdJPA(Long, Long): List&amp;lt;Task&amp;gt;&lt;br/&gt;+ findByProjectIdAndSubprojectId(Long, Long): List&amp;lt;Task&amp;gt;&lt;br/&gt;+ addTaskJPA(Task, Long, Long): void&lt;br/&gt;+ deleteTaskById(Long): void&lt;br/&gt;+ deleteTasksBySubprojectId(Long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-425" y="1152" width="423" height="261" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node2" target="node7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TaskService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ addTask(Task, Long, Long): void&lt;br/&gt;+ updateTask(Task): Task&lt;br/&gt;+ getTasksByProjectIdAndSubprojectId(Long, Long): List&amp;lt;Task&amp;gt;&lt;br/&gt;+ getTaskById(Long): Task&lt;br/&gt;+ updateTaskStatus(Long, String): void&lt;br/&gt;+ deleteTaskById(Long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1040" y="1152" width="432" height="169" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node3" target="node12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UserSubprojectAssignmentRepository&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ assignUserToSubproject(Long, Long): void&lt;br/&gt;+ findAssignedUsersBySubprojectId(Long): List&amp;lt;Account&amp;gt;&lt;br/&gt;+ deleteUserAssignmentsSubprojects(Long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-400" y="-500" width="398" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="node24" target="node18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-590" y="-441" />
+              <mxPoint x="-590" y="898" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="node24" target="node3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="node24" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UserSubprojectAssignmentService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;/&gt;&lt;p style=&quot;margin:0 0 0 4px;line-height:1.6;&quot;&gt;+ assignUserToSubproject(Long, Long): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=14;fontFamily=Helvetica;html=1;rounded=0;shadow=0;comic=0;labelBackgroundColor=none;strokeWidth=1;" parent="1" vertex="1">
+          <mxGeometry x="-1007.5" y="-470" width="319" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="640mXbKW3xFqXR1uTZi8-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.385;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="node10" target="node22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
