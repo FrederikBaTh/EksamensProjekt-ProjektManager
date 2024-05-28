@@ -47,5 +47,3 @@ Before installing, ensure all the above technologies are installed on your compu
 - **Frederik Bay Thomasen** - [FrederikBaTh](#)
 
 ---
-
-Enjoy using Alpha Solutions Project Manager for your project management needs!
