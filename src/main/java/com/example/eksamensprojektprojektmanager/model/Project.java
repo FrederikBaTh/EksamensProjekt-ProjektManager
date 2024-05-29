@@ -29,7 +29,6 @@ public class Project {
     @Column(name = "deadline",nullable = true)
     public LocalDate projectDeadline;
 
-    //TODO ikke i datebasen endnu
     @Column(nullable = true)
     public String projectStatus;
 

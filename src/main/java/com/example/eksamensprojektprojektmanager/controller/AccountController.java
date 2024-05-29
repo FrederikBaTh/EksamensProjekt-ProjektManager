@@ -114,7 +114,7 @@ public class AccountController {
             model.addAttribute("projectId", projectId);
         }
 
-        // Retrieve projects for the logged in user
+
         String userIdString = (String) request.getSession().getAttribute("userId");
         Long userId = Long.parseLong(userIdString);
         List<Project> userProjects = projectService.getProjectsByUserId(userId);

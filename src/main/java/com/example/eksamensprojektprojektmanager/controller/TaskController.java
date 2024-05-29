@@ -102,7 +102,7 @@ public class TaskController {
         Task task = taskService.getTaskById(taskId);
 
 
-        // Update fields other than ID
+
         updatedTask.setTask_id(taskId);
         existingTask.setName(updatedTask.getName());
         existingTask.setDescription(updatedTask.getDescription());

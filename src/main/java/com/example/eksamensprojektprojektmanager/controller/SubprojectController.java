@@ -43,10 +43,10 @@ public class SubprojectController {
         List<Long> userIds = projectInvitationService.getAcceptedUserIdsByProjectId(projectId);
         List<Account> users = accountService.getUsersByIdsList(userIds); // Fetch the users who have accepted the invite
 
-        // Create a map to hold the assigned users for each subproject
+
         Map<Long, List<Account>> subprojectAssignedUsers = new HashMap<>();
 
-        // Iterate over each subproject and get the assigned users
+
         for (Subproject subproject : subprojects) {
             List<Account> assignedUsers = subprojectService.getAssignedUsers(subproject.getSubproject_id());
             subprojectAssignedUsers.put(subproject.getSubproject_id(), assignedUsers);
@@ -114,7 +114,7 @@ public class SubprojectController {
         Subproject subproject = subprojectService.getSubprojectById(subprojectId);
 
 
-        // Assign the user to the subproject
+
         userSubprojectAssignmentService.assignUserToSubproject(user.getUser_id(), subproject.getSubproject_id());
 
         redirectAttributes.addFlashAttribute("successMessage", "User assigned to subproject successfully.");

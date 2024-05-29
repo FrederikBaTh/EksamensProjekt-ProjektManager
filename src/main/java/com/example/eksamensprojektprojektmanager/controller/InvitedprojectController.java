@@ -34,19 +34,19 @@ public class InvitedprojectController {
 
     @GetMapping("/invites")
     public String showInvites(Model model, HttpServletRequest request) {
-        // Retrieve the logged in user's ID from the session
+
         String userIdString = (String) request.getSession().getAttribute("userId");
         if (userIdString != null) {
             Long userId = Long.parseLong(userIdString);
 
-            // Assuming you have a method in your service to get the invites for a user
+
             List<ProjectInvitation> projectInvitation = projectInvitationService.getInvitesByUserId(userId);
 
-            // Add the invites to the model
+
             model.addAttribute("projectInvitation", projectInvitation);
         }
 
-        // Return the name of the view that will display the invites
+
         return "invites";
     }
 
@@ -57,31 +57,31 @@ public class InvitedprojectController {
 
         long userId = Long.parseLong(userIdString);
 
-        // Retrieve project IDs for accepted invitations
+
         List<Long> acceptedProjectIds = projectInvitationService.getAcceptedProjectIdsByUserId(userId);
 
-        // Retrieve invited projects based on accepted project IDs
+
         List<Project> invitedProjects = projectService.getProjectsByProjectIds(acceptedProjectIds);
 
         System.out.println("Retrieved invited projects: " + invitedProjects);
 
         model.addAttribute("invitedProjects", invitedProjects);
 
-        return "invitedProjects"; // HTML page name for displaying invited projects
+        return "invitedProjects";
     }
     @PostMapping("/acceptInvite")
     public String acceptInvite(@RequestParam("inviteId") Long inviteId) {
-        // Assuming you have a method in your service to accept an invite
+
         projectInvitationService.acceptInvite(inviteId);
         projectInvitationService.deleteInvitationsForUser(inviteId);
-        return "redirect:/seeProjects"; // Redirect to projects page after accepting the invite
+        return "redirect:/seeProjects";
     }
    //bliver ikke brugt
     @PostMapping("/declineInvite")
     public String declineInvite(@RequestParam("inviteId") Long inviteId) {
-        // Assuming you have a method in your service to decline an invite
+
         projectInvitationService.declineInvite(inviteId);
-        return "redirect:/invites"; // Redirect to invites page after declining the invite
+        return "redirect:/invites";
     }
 
 
@@ -91,10 +91,10 @@ public class InvitedprojectController {
 
         long userId = Long.parseLong(userIdString);
 
-        // Assuming you have a method in your service to delete invitations for a user
+
         projectInvitationService.deleteInvitationsForUser(userId);
 
-        return "redirect:/invites"; // Redirect to invites page after deleting the invitations
+        return "redirect:/invites";
     }
 
 

@@ -31,7 +31,7 @@
     </tr>
     </thead>
     <tbody>
-    <!-- Iterate over subprojects and display them -->
+
     <tr th:each="subproject : ${subprojects}">
         <td>
             <form th:action="@{'/tasks/' + ${projectId} + '/' + ${subproject.subproject_id}}" method="get">
@@ -42,11 +42,11 @@
         <td th:text="${subproject.description}"></td>
 
         <td>
-    <!-- Update button for each subproject -->
+
             <form th:action="@{/updateSubproject/{id}(id=${subproject.subproject_id})}" method="get">
                 <button type="submit" class="btn">Opdater</button>
             </form>
-            <!-- Delete button for each subproject -->
+
             <form th:action="@{/deleteSubproject/{projectId}/{subprojectId}(projectId=${projectId}, subprojectId=${subproject.subproject_id})}"
                   method="post"
                   onsubmit="return confirm('Er du sikker på, at du vil slette dette underprojekt?');">

@@ -36,7 +36,7 @@
     </tr>
     </thead>
     <tbody>
-    <!-- Iterate over projects and display them -->
+
     <tr th:each="project : ${projects}">
         <td>
     <form th:action="@{/subprojects/{id}(id=${project.project_id})}" method="get">
@@ -47,11 +47,11 @@
         <td th:text="${project.startDate != null ? #temporals.format(project.startDate, 'dd-MM-yyyy') : 'Start Date Not Provided'}"></td>
         <td th:text="${project.projectDeadline != null ? #temporals.format(project.projectDeadline, 'dd-MM-yyyy') : 'Deadline Not Provided'}"></td>
         <td>
-            <!-- Update button for each project -->
+
             <form th:action="@{/updateProject/{id}(id=${project.project_id})}" method="get">
                 <button type="submit" class="btn">Opdater</button>
             </form>
-            <!-- Delete button for each project -->
+
             <form action="/deleteProject" method="post" onsubmit="return confirm('Er du sikker på, at du vil slette dette projekt?');">
                 <input type="hidden" name="id" th:value="${project.project_id}" />
                 <button type="submit" class="btn">Slet Projekt</button>

@@ -23,10 +23,10 @@ public class UserSubprojectAssignmentService {
     public void assignUserToSubproject(Long userId, Long subprojectId) {
         userSubprojectAssignmentRepository.assignUserToSubproject(userId, subprojectId);
 
-        // Fetch the updated list of assigned users for the subproject
+
         List<Account> assignedUsers = subprojectService.getAssignedUsers(subprojectId);
 
-        // Find the subproject and update its assignedUsers list
+
         Subproject subproject = subprojectService.getSubprojectById(subprojectId);
         if (subproject != null) {
             subproject.setAssignedUsers(assignedUsers);

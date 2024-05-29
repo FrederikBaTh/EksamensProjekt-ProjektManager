@@ -95,21 +95,21 @@ public class AccountRepository {
     }
 
     public void deleteUser(Long userId) {
-        // Delete all invitations for the user
+
         projectInvitationRepository.deleteInvitationsForUser(userId);
 
-        // Delete all subproject assignments for the user
+
         userSubprojectAssignmentRepository.deleteUserAssignmentsSubprojects(userId);
 
-        // Get all projects associated with the user
+
         List<Project> userProjects = projectRepository.getProjectsByUserId(userId);
 
-        // Delete each project
+
         for (Project project : userProjects) {
             projectRepository.deleteProjectById(project.getProject_id());
         }
 
-        // Delete the user
+
         String sql = "DELETE FROM users WHERE user_id = ?";
         jdbcTemplate.update(sql, userId);
     }
